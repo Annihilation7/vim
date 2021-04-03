@@ -1,0 +1,14 @@
+GAN是无监督学习
+
+image_generation:
+    random_vector -> nn generator -> image (no condition)
+
+gan组成：
+    generator: vecotr -> image
+    discriminator: image -> scalar
+    两者共同进化
+
+流程：
+    1. fix G，update D(fake and real各训一次，但是判别器的训练次数不一定是1次，有可能是两次)
+    2. fix D, update G(generate fake to discriminator, make bigger score of D)
+    
